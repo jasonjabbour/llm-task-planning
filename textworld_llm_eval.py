@@ -8,10 +8,13 @@ from groq import Groq
 client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
 
 # List of models and environments
-models = ["mixtral-8x7b-32768", "llama3-8b-8192", "gemma-7b-it"]
+# models = ["mixtral-8x7b-32768", "llama3-8b-8192", "gemma-7b-it"]
+
+models = ["mixtral-8x7b-32768"]
+
 environments = [
-    {"id": "env_easy", "difficulty": 1, "game_path": "tw_games/easy.z8"},
-    {"id": "env_medium", "difficulty": 2, "game_path": "tw_games/medium.z8"},
+    # {"id": "env_easy", "difficulty": 1, "game_path": "tw_games/easy.z8"},
+    # {"id": "env_medium", "difficulty": 2, "game_path": "tw_games/medium.z8"},
     {"id": "env_hard", "difficulty": 3, "game_path": "tw_games/hard.z8"},
 ]
 
@@ -24,11 +27,14 @@ request_infos = textworld.EnvInfos(
 # CSV file to store results
 csv_file = "experiment_results.csv"
 
-# Prepare the CSV file
-with open(csv_file, mode="w", newline="") as file:
+# Check if the CSV file exists and prepare it accordingly
+file_exists = os.path.exists(csv_file)
+
+with open(csv_file, mode="a", newline="") as file:  # Open file in append mode
     writer = csv.writer(file)
-    # Write header row
-    writer.writerow(["Model", "Environment", "Difficulty", "Run", "Moves", "Score"])
+    if not file_exists:
+        # Write header row if file does not exist
+        writer.writerow(["Model", "Environment", "Difficulty", "Run", "Moves", "Score"])
 
 # Run experiments
 for model in models:
@@ -36,19 +42,16 @@ for model in models:
     for env in environments:
         print(f' --- Environment: {env} ---')
         # Register the game and create the environment
-        env_id = textworld.gym.register_game(env["game_path"], request_infos, max_episode_steps=50)
+        env_id = textworld.gym.register_game(env["game_path"], request_infos, max_episode_steps=40)
         textworld_env = textworld.gym.make(env_id)
 
-        for run in range(1, 6):  # Run 5 trials per model per environment
+        for run in range(1, 2):  # Run 5 trials per model per environment
             print(f'---- Trial: {run} ----')
             obs, infos = textworld_env.reset()
             textworld_env.render()
 
             score, moves, done = 0, 0, False
             messages = []  # Store interaction history for the model
-
-
-
 
             while not done:
                 # Prepare the prompt for the LLM by including entities and admissible commands
@@ -62,6 +65,12 @@ for model in models:
                     messages = [{"role": "user", "content": prompt_content}]
                 else:
                     messages.append({"role": "user", "content": prompt_content})
+
+
+                # Check message length and manage context size
+                if len(messages) > 20:
+                    # Keep only the most recent 20 messages
+                    messages = messages[-20:]
 
                 # Call the language model for the next action
                 chat_completion = client.chat.completions.create(
