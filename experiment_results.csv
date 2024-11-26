@@ -1,0 +1,7 @@
+Model,Environment,Difficulty,Run,Moves,Score
+mixtral-8x7b-32768,env_easy,1,1,5,1
+mixtral-8x7b-32768,env_easy,1,2,5,1
+mixtral-8x7b-32768,env_easy,1,3,6,1
+mixtral-8x7b-32768,env_easy,1,4,6,1
+mixtral-8x7b-32768,env_easy,1,5,6,1
+mixtral-8x7b-32768,env_medium,2,1,10,1

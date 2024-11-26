@@ -3,7 +3,7 @@ from huggingface_hub import hf_hub_download, HfApi, HfFolder
 
 # Authenticate with your Hugging Face token
 api = HfApi()
-HfFolder.save_token('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')
+HfFolder.save_token('your_token_here')
 
 # Define the repository and filename
 repo_id = "TheBloke/Llama-2-7B-GGML"
