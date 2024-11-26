@@ -8,14 +8,14 @@ from groq import Groq
 client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
 
 # List of models and environments
-# models = ["mixtral-8x7b-32768", "llama3-8b-8192", "gemma-7b-it"]
+# models = ["mixtral-8x7b-32768", "llama3-8b-8192", "gemma-7b-it", "gemma2-9b-it"]
 
-models = ["mixtral-8x7b-32768"]
+models = ["gemma2-9b-it"]
 
 environments = [
-    # {"id": "env_easy", "difficulty": 1, "game_path": "tw_games/easy.z8"},
+    {"id": "env_easy", "difficulty": 1, "game_path": "tw_games/easy.z8"},
     # {"id": "env_medium", "difficulty": 2, "game_path": "tw_games/medium.z8"},
-    {"id": "env_hard", "difficulty": 3, "game_path": "tw_games/hard.z8"},
+    # {"id": "env_hard", "difficulty": 3, "game_path": "tw_games/hard.z8"},
 ]
 
 # Request additional information for TextWorld environments
