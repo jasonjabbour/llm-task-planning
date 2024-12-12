@@ -9,7 +9,7 @@ def convert_state_to_hashable(state):
     hashable_state = frozenset(state.items())
     return hashable_state
 
-def bfs_plan(state0, actions_list, goal_fluent, max_iters=500000, debug_callback=None):
+def bfs_plan(state0, actions_list, goal_fluent, max_iters=50000000):
     """
     Perform BFS to find a sequence of actions that satisfies the goal state.
 
@@ -30,11 +30,12 @@ def bfs_plan(state0, actions_list, goal_fluent, max_iters=500000, debug_callback
     queue = deque([start])
     visited = set()
     search_iters = 0
-
+    # print()
     while queue:
         search_iters += 1
         if search_iters > max_iters:
             print("Max iterations reached.")
+            # breakpoint()
             return ["no-op"], states[start]
 
         node = queue.popleft()
@@ -45,37 +46,36 @@ def bfs_plan(state0, actions_list, goal_fluent, max_iters=500000, debug_callback
             continue
 
         visited.add(current_state_hashable)
-
+        
         # Check if the current state satisfies the goal
         if check_goal(current_state, goal_fluent):
+            # breakpoint()
             print("Goal reached!")
+            breakpoint()
             return list(node), current_state
 
+        action_num = 0
+        # breakpoint()
         # Expand the current node
         for action in actions_list:
             print(action)
-            try:
-                new_state = transition_model(deepcopy(current_state), action)
+            action_num += 1
+            print(action_num)
+            new_state = transition_model(deepcopy(current_state), action)
+            # breakpoint()
+
+            if new_state and (new_state != current_state):
                 # breakpoint()
+                new_node = node + (action,)
+                states[new_node] = deepcopy(new_state)
 
-                if new_state and new_state != current_state:
+                queue.append(new_node)
+
+                # Check if this new state satisfies the goal
+                if check_goal(new_state, goal_fluent):
+                    print("Goal reached!")
                     breakpoint()
-                    new_node = node + (action,)
-                    states[new_node] = deepcopy(new_state)
-
-                    queue.append(new_node)
-
-                    # Check if this new state satisfies the goal
-                    if check_goal(new_state, goal_fluent):
-                        print("Goal reached!")
-                        return list(new_node), new_state
-
-            except Exception as e:
-                print(f"Error during action '{action}': {e}")
-                if debug_callback:
-                    debug_callback(current_state, action)
-                else:
-                    raise
+                    return list(new_node), new_state
 
     print("Goal not found within the iteration limit.")
     return ["no-op"], states[start]
@@ -102,7 +102,7 @@ initial_state = {
 #     "lock the chest with the key"
 # ]
 
-actions_list = ['close chest', 'close TextWorld style chest', 'open chest', 'open TextWorld style chest', 'take key', 'take TextWorld style key', 'put key', 'put TextWorld style key', 'lock chest', 'lock TextWorld style chest', 'unlock chest', 'unlock TextWorld style chest', 'go north', 'go south', 'go east', 'go west', 'examine chest', 'examine TextWorld style chest', 'examine key', 'examine TextWorld style key', 'examine workbench', 'look', 'inventory', 'take key', 'take TextWorld style key', 'take key from chest', 'take key from TextWorld style chest', 'take key from workbench', 'take TextWorld style key from chest', 'take TextWorld style key from TextWorld style chest', 'take TextWorld style key from workbench', 'drop key', 'drop TextWorld style key', 'put key on workbench', 'put TextWorld style key on workbench', 'go north', 'go south', 'go east', 'go west', 'unlock chest with key', 'unlock chest with TextWorld style key', 'unlock TextWorld style chest with key', 'unlock TextWorld style chest with TextWorld style key']
+actions_list = ['close chest', 'close TextWorld style chest', 'open chest', 'open TextWorld style chest', 'take key', 'take TextWorld style key', 'put key', 'put TextWorld style key', 'lock chest', 'lock TextWorld style chest', 'unlock chest', 'unlock TextWorld style chest', 'go north', 'go south', 'go east', 'go west', 'examine chest', 'examine TextWorld style chest', 'examine key', 'examine TextWorld style key', 'examine workbench', 'look', 'inventory', 'take key', 'take TextWorld style key', 'take key from chest', 'take key from TextWorld style chest', 'take key from workbench', 'take TextWorld style key from chest', 'take TextWorld style key from TextWorld style chest', 'take TextWorld style key from workbench', 'drop key', 'drop TextWorld style key', 'put key on workbench', 'put TextWorld style key on workbench', 'go north', 'go south', 'go east', 'go west', 'unlock chest with key', 'unlock chest with TextWorld style key', 'unlock TextWorld style chest with key', 'unlock TextWorld style chest with TextWorld style key', 'lock the chest with the key']
 
 goal_fluent = [
     "at(P, attic: r)",
