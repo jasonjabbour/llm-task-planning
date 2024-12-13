@@ -1,0 +1,12 @@
+## Actions to win the level:
+
+```python
+["up", "up", "up", "right", "right", "right", "up", "right", "up", "right", "down", "right", "down", "right", "up", "right", "down", "right", "right"]
+```
+
+**Explanation:**
+
+1. Move the `baba_obj` up 3 times to reach a position where it can reach the `flag_word` in one move.
+2. Move the `baba_obj` one position to the right to stand next to the `flag_word`.
+3. Move the `baba_obj` up 6 times to reach the `win_word`.
+4. Move the `baba_obj` one position to the right to claim the win and win the level.

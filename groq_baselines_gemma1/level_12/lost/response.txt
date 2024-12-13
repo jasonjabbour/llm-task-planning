@@ -1,0 +1,50 @@
+```python
+
+[
+    'right',
+    'right',
+    'up',
+    'down',
+    'left',
+    'left',
+    'up',
+    'right',
+    'left',
+    'down',
+    'right',
+    'down',
+    'right',
+    'down'
+]
+```
+
+**Explanation:**
+
+1. Move the 'baba_obj' one space to the right until it collides with the 'lava_obj'. This ensures the 'baba_obj' can escape the lava.
+
+
+2. Move the 'baba_obj' one space up.
+
+
+3. Move one space down.
+
+
+4. Move one space to the left five times to reach the 'flag_obj'.
+
+
+5. Move one space down.
+
+
+6. Move one space to the left three times.
+
+
+7. Move one space up.
+
+
+8. Move one space to the right four times.
+
+
+9. Move one space down.
+
+
+10. Move one space to the right until the 'baba_obj' reaches the 'flag_word'.

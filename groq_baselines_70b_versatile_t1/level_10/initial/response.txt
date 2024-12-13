@@ -1,0 +1,14 @@
+To win the level, we need to move the 'baba_obj' to the 'win_word' location. The 'baba_obj' is initially located at [2, 6] and the 'win_word' is located at [3, 7]. 
+
+Since the 'baba_obj' can only move up, down, left, or right, we need to find a sequence of these movements that will take us from [2, 6] to [3, 7]. 
+
+First, we need to move down to [2, 5] or [2, 4] or [2, 3] or [2, 2] or [2, 1] to be able to move right to reach x-coordinate 3. Then, once we are at x-coordinate 3, we can move up to reach y-coordinate 7.
+
+Here are the actions:
+
+```python
+["down", "down", "down", "down", "right", "up", "up", "up", "up"]
+```
+
+Explanation:
+This action sequence first moves the 'baba_obj' down to [2, 2]. Then it moves the 'baba_obj' right to [3, 2]. Finally, it moves the 'baba_obj' up to [3, 7], which is the location of the 'win_word'.

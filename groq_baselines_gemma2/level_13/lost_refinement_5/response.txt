@@ -1,0 +1,10 @@
+```python
+["right", "down", "right", "down", "right", "down", "right", "down", "right"] 
+```
+
+explanation: 
+
+The goal is to get the baba_obj to the flag_obj. My previous attempts failed because they were not consistently navigating towards the flag. This new sequence focuses on moving right and down, aiming to reach the lower right corner where the flag is located. The sequence assumes that the 'baba_obj' is initially at its starting position ([6, 4]).  The plan is to move the 'baba_obj' directly below the initial flag position ([6, 7]) by moving right and down consistently, ensuring I reach the flag object.
+
+
+```

@@ -1,0 +1,13 @@
+```python
+
+['down', 'up', 'right', 'right']
+
+```
+
+**Explanation:**
+
+The key to winning this level is to return the lava creatures to their original positions. 
+
+- By examining the history of previous attempts, we can see that the lava creatures were moved down to the bottom of the level. 
+- The action sequence 'down, up' will move the 'lava_obj' back to its original position, at [1, 6]. 
+- Once the lava creatures are back in their starting positions, the 'flag_word' can be collected by moving to [6, 1] and completing the level.

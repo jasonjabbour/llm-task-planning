@@ -1,0 +1,14 @@
+```python
+["down", "right", "down", "right"] 
+```
+
+## Explanation:
+
+The goal is to win the level, meaning to reach the `win_word` location.  The current state shows the `win_word` at '[8, 8]' and the controllable character 'baba_obj' at [2,5]. 
+
+This sequence of actions will move the 'baba_obj' to the winning position:
+
+* **down:** Moves the 'baba_obj' one step down.
+* **right:** Moves the 'baba_obj' one step right.
+* **down:** Moves the 'baba_obj' one step down.
+* **right:** Moves the 'baba_obj' one step right, reaching the `win_word` position [8,8].

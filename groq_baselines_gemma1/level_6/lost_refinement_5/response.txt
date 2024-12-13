@@ -1,0 +1,14 @@
+```Python
+
+['up', 'right', 'right', 'down']
+
+```
+
+**Explanation:**
+
+The key to this level is to strategically move the Baba object to the correct location to spell out the "win_word" (8, 8). 
+
+* The first action, **'up'**, is to move the Baba object up one space. This creates the opportunity to move the rock object one space down in the next action.
+* The second action, **'right'** is to move the rock object one space to the right, setting up the final word configuration.
+* The third action, **'right'** is to move the rock object one space to the right once more, successfully spelling out the word "win_word".
+* The fourth action, **'down'**, is to move the flag object one space down to complete the level.

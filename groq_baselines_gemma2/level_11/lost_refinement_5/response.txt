@@ -1,0 +1,18 @@
+```Python
+
+["right", "right", "down", "up", "left"]
+```
+
+explanation: 
+
+The previous attempts failed due to running into the goop or placing the baba_obj in a position where it couldn't reach the flag. 
+
+This new sequence aims to:
+
+1. **Move the baba_obj right twice:** To clear the path and position it closer to the flag.
+2. **Move down:** To potentially create an opening by pushing goop away.
+3. **Move up:** To go towards the flag, hopefully avoiding the goop that might have been pushed down.
+4. **Move left:** To fine-tune the position and approach the flag directly.
+
+
+This sequence prioritizes a more controlled approach, manipulating the goop to create a clear path towards the flag.

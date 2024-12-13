@@ -1,0 +1,27 @@
+```
+[
+    'right',
+    'right',
+    'up',
+    'left',
+    'up'
+]
+```
+
+**Explanation:**
+
+The key to solving this level is to carefully manipulate the available objects to spell out the winning word. 
+
+- By analyzing the history of actions and the current state, we can identify the location of the relevant objects (baba_obj, rock_obj, flag_obj, flag_word, rock_word, win_word) and the words that need to be spelled.
+
+
+- The actions sequence starts by moving the `baba_obj` one position to the right to reach the correct position to form the first letter of the winning word "ABA".
+
+
+- Then, moving one step up, the `baba_obj` now aligns with the first letter of the `flag_word`.
+
+
+- One step to the left and another up, the `baba_obj` aligns with the second letter of the `flag_word`.
+
+
+- Finally, moving one step up completes the spelling of the word "ABA".

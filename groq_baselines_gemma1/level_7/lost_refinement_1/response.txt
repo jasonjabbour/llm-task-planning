@@ -1,0 +1,12 @@
+```
+
+['left', 'down', 'left', 'right']
+
+```
+
+**Explanation:**
+
+* The key to solving this level is to correctly align the keke_word and the flag_word. 
+* By analyzing the replay buffer, we can see that the player has previously moved keke_obj one space to the right and one space down, but it didn't result in victory. 
+* This means the keke_word needs to be rotated one position counterclockwise. 
+* Moving the keke_obj one space down and then one space to the left will ultimately align it with the flag_word, completing the level.

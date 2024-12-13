@@ -1,0 +1,10 @@
+```python
+["right", "right", "down", "right", "down", "up"]
+```
+
+explanation:
+
+The previous sequence got stuck in a loop around the middle of the board.  The corrected sequence prioritizes moving towards the top right corner where the 'win_word' and the 'flag_obj' are located.  This path avoids the lava and ensures the "baba_obj" reaches the 'flag' to win.  
+
+
+Let me know if you'd like a more detailed step-by-step explanation of each action's purpose!

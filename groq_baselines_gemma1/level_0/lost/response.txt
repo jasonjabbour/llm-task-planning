@@ -1,0 +1,18 @@
+## Actions to win the level:
+
+```
+["up", "up", "right", "left", "left", "up", "right", "right", "left"]
+```
+
+**Explanation:**
+
+1. Move the `baba_obj` **up** twice to pick it up.
+2. Move the `baba_obj` **right** to reach the starting position of the word `win_word`.
+3. Move the `baba_obj` **left** one step.
+4. Move the `baba_obj` **left** one more step.
+5. Move the `baba_obj` **up** one step.
+6. Move the `baba_obj` **right** two steps.
+7. Move the `baba_obj` **right** one more step.
+8. Move the `baba_obj` **left** one step.
+
+This sequence of actions will collect the `baba_word` and the `win_word` and fulfill the level's win condition.

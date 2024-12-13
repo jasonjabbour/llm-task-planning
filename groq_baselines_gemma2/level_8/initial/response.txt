@@ -1,0 +1,11 @@
+```python
+["right", "right", "up", "up", "right", "up", "up", "right"]
+```
+
+explanation: 
+
+The goal is to reach the flag located at (5, 8).  Starting at (3, 1) we need to navigate the 'baba_obj'  
+
+* **right, right:** Move two spaces to the right to clear the wall and align with the flag. 
+* **up, up, right:** Climb up two spaces,  then move right one space to reach the flag's diagonal.
+* **up:** One more up move places the 'baba_obj' on top of the  flag, winning the level.

@@ -1,0 +1,14 @@
+```Python
+["right", "down", "right", "down", "right", "down"]
+```
+
+### Explanation:
+My previous attempts failed to reliably get the baba object into position to progress.  
+
+This new sequence focuses on:
+
+* **Moving the `baba_obj` object to the right**: Using a series of "right" moves will push the `baba_obj` towards the desired position near the `flag_word`.
+* **Vertical Movement**:  The "down" moves are strategic. They aim to manipulate the `baba_obj`'s position relative to the `rock_word` and any potential obstacles.
+
+
+By repeatedly moving right and then down, the plan  is to guide the `baba_obj`  through the level, avoiding obstacles and ultimately reaching the flag.

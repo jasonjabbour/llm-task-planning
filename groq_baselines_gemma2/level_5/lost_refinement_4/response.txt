@@ -1,0 +1,18 @@
+```python
+["left", "down", "right", "down", "right", "down", "left", "up"]
+```
+
+explanation:
+
+The previous attempts mostly focused on moving the 'baba_obj' horizontally, but it seems the key is manipulating the 'rock_obj' to create a path to the flag. 
+
+This sequence:
+
+1. **left, down:** Moves the 'baba_obj' to allow the rock to potentially slide down. 
+2. **right, down:** Shifts 'baba_obj' again, guiding the rock further.
+3. **right, down:** Continues guiding the 'rock_obj' downwards.
+4. **left, up:** This is crucial! It retreats the 'baba_obj' to avoid blocking the path to the flag and allows 'you_word' to reach the flag.
+
+
+
+Let me know if you'd like to try again with a new state!

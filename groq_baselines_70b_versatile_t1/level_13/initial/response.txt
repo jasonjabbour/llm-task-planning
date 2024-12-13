@@ -1,0 +1,18 @@
+To win the level, we need to move the 'baba_obj' to the location of the 'win_word'. The 'baba_obj' is initially located at [6, 4] and the 'win_word' is located at [8, 1]. 
+
+Our goal is to find a sequence of actions from the action space ['up', 'down', 'left', 'right'] that will allow us to move the 'baba_obj' to the location of the 'win_word' without hitting any obstacles or losing the game.
+
+First, we need to move the 'baba_obj' down to the row where the 'win_word' is located. Since the 'baba_obj' is initially at [6, 4] and the 'win_word' is at [8, 1], we need to move the 'baba_obj' down 2 rows and left 3 columns.
+
+However, we need to take into account the 'wall_obj' and other obstacles in the level. We can move the 'baba_obj' down to the row where the 'win_word' is located by moving down and then we can move it to the left until we reach the column where the 'win_word' is located.
+
+Here are the actions that will allow us to win the level:
+
+```python
+["down", "down", "left", "left", "left"]
+```
+
+Explanation:
+The given sequence of actions will move the 'baba_obj' down 2 rows to the row where the 'win_word' is located, and then move it left 3 columns to the column where the 'win_word' is located, thus winning the level. 
+
+Note: This sequence of actions assumes that there are no other obstacles or rules in the level that would prevent the 'baba_obj' from reaching the 'win_word'. The actual sequence of actions may need to be adjusted based on the specific rules and obstacles in the level.

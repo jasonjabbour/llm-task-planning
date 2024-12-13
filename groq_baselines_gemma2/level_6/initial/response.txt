@@ -1,0 +1,26 @@
+```Python
+["right", "right", "down", "down", "right", "down", "right", "right", "down", "down"]
+```
+
+Explanation:
+
+This sequence of actions is designed to move the 'baba_obj' character across the game board to reach the 'win_word' location. Here's a breakdown:
+
+1. **"right":**  Move the 'baba_obj' one position to the right.
+2. **"right":** Move the 'baba_obj' another position to the right.
+
+Now the baba is at position [4, 2]
+
+3. **"down":** Move the 'baba_obj' down one position.
+4. **"down":** Move the 'baba_obj' down one more position. 
+
+Now the baba is at position [4, 0]
+
+5. **"right":** Move the 'baba_obj' right one position.
+6. **"down":** Move to the [5, 0]
+7. **"right":** Move to [6, 0]
+8. **"right":** Move to [7, 0]
+9. **"down":** Move to [7, 1]
+10. **"down":** Move to [7, 2]
+
+Reaching with the `'baba_obj'` to the `'win_word'`  should trigger the win condition in the game.

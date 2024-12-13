@@ -1,0 +1,20 @@
+## Actions to Win the Level:
+
+```
+["right", "right", "up", "down", "right", "right", "up", "up", "left", "left", "down", "up", "up", "right", "right", "up"]
+```
+
+**Reasoning:**
+
+1. **Move the Baba object to the center:** 
+    - The initial state shows the Baba object is at (2, 5). We need to move it to the center (4, 4) to complete the win word requirement.
+2. **Move the flag object to complete the win word:**
+    - The flag object needs to be landed on (8, 8) to complete the win word "win_word."
+3. **Move diagonally towards the flag:**
+    - The sequence "up", "down", "right", "right" moves the flag object diagonally downwards towards its desired position.
+4. **Move the Baba object to join the win word:**
+    - After placing the flag, move the Baba object one space to the right to land on the "w" of the "win_word."
+5. **Move the remaining objects into place:**
+    - The remaining actions move the remaining objects into their correct positions to complete the win word.
+
+**This sequence of actions will ultimately result in completing the word "win_word" and achieving victory in the level.**

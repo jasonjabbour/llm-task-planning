@@ -1,0 +1,14 @@
+```python
+["right", "right", "down", "left", "up", "up"]
+```
+
+explanation: 
+
+The previous attempts failed because they either led Baba to the goop,  or didn't reach the win flag. This sequence aims to move Baba carefully around the obstacles, avoid goop, and directly reach the flag. 
+
+Here's a breakdown:
+
+1. **right, right:** Move Baba two spaces to the right.
+2. **down:** Move Baba down to get past the 'is_word' obstacle.
+3. **left:** Move one space to the left to align with the flag.
+4. **up, up:** Move Baba two spaces up to reach the 'win_word' and win the level.

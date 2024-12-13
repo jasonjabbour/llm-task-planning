@@ -1,0 +1,19 @@
+```Python
+["right", "right", "right", "down", "down", "down", "right", "right", "right", "down", "right"]
+```
+
+**explanation:**
+
+The goal is to win the level, which means reaching the `win_word` location.  Analyzing the state, we see:
+
+* **Your Character:** You start at `you_word` located at (3, 2).
+* **The `win_word`:** The `win_word` is located at (8, 1).
+
+To reach the `win_word`, we need to navigate through the environment avoiding obstacles ('wall_obj', 'wall_word', 'stop_word'). Here's the strategy:
+
+1.  **Move Right:** Repeatedly move right until you reach the column of the `win_word` (column 8).
+2.  **Move Down:** Once you're in the correct column, move down to reach the `win_word`'s row (row 1). 
+
+
+
+Let me know if you want to try another level!

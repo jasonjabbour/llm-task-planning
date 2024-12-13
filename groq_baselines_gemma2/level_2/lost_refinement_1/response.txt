@@ -1,0 +1,12 @@
+```python
+["down", "right", "right", "up","up", "left", "left", "up"] 
+```
+
+explanation: 
+
+The previous sequence got stuck by moving the 'baba_obj'  too far right and getting trapped.  The corrected sequence focuses on:
+
+1. **Reaching the win_word:** It aims to move the 'baba_obj' directly towards the 'win_word' at [2,4]. 
+2. **Avoiding Traps:** It  avoids moving the object too far right, preventing it from getting stuck.
+
+The new sequence prioritizes a more direct path to the win condition while considering the movement constraints.

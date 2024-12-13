@@ -1,0 +1,16 @@
+```python
+["down", "down", "right", "right", "up", "up", "left", "left"]
+```
+
+**explanation:** 
+
+The previous attempt got stuck in a loop.  It's important to prioritize moving towards the 'flag_obj'. 
+
+1. **Down, Down:** Start by moving down to clear the path below the 'baba_obj'. 
+2. **Right, Right:** Move right to align with the 'flag_obj' path.
+3. **Up, Up:** Move up to reach the 'flag_obj'.
+4. **Left, Left:**  Finally, move left to pick up the flag and win the level.  
+
+
+
+Let me know if you have another level you'd like me to help with!

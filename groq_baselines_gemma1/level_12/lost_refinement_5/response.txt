@@ -1,0 +1,14 @@
+```Python
+
+['right', 'up', 'left', 'left']
+
+```
+
+**Explanation:**
+
+The key to winning this level is to reach the flag object (represented as 'flag_obj') by following the specified word 'win_word'. 
+
+- The first action, 'right', moves the 'baba_obj' one position to the right, towards the 'flag_obj'. 
+- The second action, 'up', moves the 'baba_obj' one position up, closer to the 'flag_obj'. 
+- The third action, 'left', moves the 'baba_obj' one position to the left, still closer to the 'flag_obj'. 
+- The final action, 'left', moves the 'baba_obj' one position to the left once more, ensuring it ends precisely on the 'flag_obj'.

@@ -1,0 +1,20 @@
+```Python
+
+['right', 'right', 'up', 'right']
+
+```
+
+**Explanation:**
+
+The key to solving this level is to keep the control of the `baba_word` and the `flag_word` in the center of the grid. 
+
+1. Move the `baba_word` one position to the right until it reaches the center of the grid (column 5).
+
+
+2. While the `flag_word` is not aligned horizontally with the `baba_word`, move the `baba_word` one position up.
+
+
+3. When the `flag_word` is aligned horizontally with the `baba_word`, move the `flag_word` one position to the right.
+
+
+4. Finally, move the `baba_word` one position down to its final position.

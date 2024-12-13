@@ -1,0 +1,13 @@
+```python
+["right", "down", "down", "right", "up", "up", "right", "right", "right", "down", "right"]
+```
+
+explanation: The previous attempt got stuck in a loop moving right and down. This new sequence aims to navigate the baba more strategically. 
+
+* It moves right initially to access new areas. 
+* Then, it carefully moves down to avoid barriers and reach the goal. 
+* Finally, it moves right again to get to the winning position. 
+
+
+
+Let me know if you'd like me to elaborate on any specific move!

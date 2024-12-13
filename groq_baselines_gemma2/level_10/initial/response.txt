@@ -1,0 +1,15 @@
+```python
+["down", "right", "down", "right"]
+```
+
+explanation:
+The goal is to move the 'baba_obj' to the win location ([3, 7]).  
+
+1. **down:** Starting at [2, 6], move down one cell to [2, 5].
+2. **right:** Move right one cell to [3, 5].
+3. **down:** Move down one cell to [3, 4].
+4. **right:** Move right one cell to [3, 5], which is the win location. 
+
+
+
+Let me know if you want to try another level!

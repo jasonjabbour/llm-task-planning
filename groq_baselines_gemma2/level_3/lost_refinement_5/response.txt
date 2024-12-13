@@ -1,0 +1,8 @@
+```python
+["down", "right", "down", "right", "down", "right", "up", "left"] 
+```
+
+explanation:
+
+My previous attempts  didn't take the love_obj  entity into account effectively. This new sequence focuses on moving the love_obj  so it reaches the winning location by calculating 
+the right path. The sequence starts by moving the love_obj down until it is directly beside the win_word. Then it moves right to directly align with the win word and finally up.

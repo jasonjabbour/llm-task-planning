@@ -1,0 +1,31 @@
+```python
+['right', 'right', 'up', 'up', 'left', 'left', 'up', 'down', 'right', 'right']
+```
+
+**Explanation:**
+
+1. Move the Baba object **right** twice to reach the start of the word "baba".
+
+
+2. Move the Baba object **up** twice to reach the top of the level.
+
+
+3. Move the Baba object **left** once to reach the 'a' in the word "baba".
+
+
+4. Move the Baba object **up** once to reach the center of the word "baba".
+
+
+5. Move the Baba object **left** once to reach the 'a' in the word "baba".
+
+
+6. Move the Baba object **up** once to reach the top of the level.
+
+
+7. Move the Baba object **down** once to reach the flag object.
+
+
+8. Move the Baba object **right** once to pick up the flag object.
+
+
+9. Move the Baba object **right** once to reach the end of the word "baba".

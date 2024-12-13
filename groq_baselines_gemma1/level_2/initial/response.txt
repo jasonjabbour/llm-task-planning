@@ -1,0 +1,11 @@
+## Actions to win the level:
+
+```
+["up", "up", "right", "right", "right", "right", "right", "right", "right", "right", "right"]
+```
+
+**Explanation:**
+
+1. Move the highlighted 'baba_obj' **up** twice to reach the starting position of the 'win_word'.
+2. Move the 'baba_obj' **right** for 10 steps to position it directly above the 'win_word'.
+3. The 'win_word' itself is already in its final position, so no further action is needed to complete the level.

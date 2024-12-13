@@ -1,0 +1,12 @@
+```python
+["left", "down", "left", "down"] 
+```
+
+explanation: 
+
+The previous sequence tried moving the "baba_obj" right, which led to it being stuck.  The corrected sequence aims to:
+
+1. **`left`**: Move baba_obj  left to access the `flag_word`
+2. **`down`**:  Move baba_obj down to reach the `flag_word` and interact with it.
+3. **`left`**: Move baba_obj left to access the win condition.
+4. **`down`**: Move baba_obj down to collect the `win_word` and win the level.

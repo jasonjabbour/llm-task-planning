@@ -1,0 +1,11 @@
+```
+
+["right", "right", "up", "down"]
+
+```
+
+**Explanation:**
+
+* Based on the replay buffer of your previous attempts, it seems that you're having trouble moving the `baba_obj` to the correct position. 
+* In the current state, the `baba_obj` is at `[2, 5]`, but the `win_word` requires it to be at `[8, 8]` to win the level.
+* The action sequence suggested above utilizes the `up`, `right`, `down`, and `right` actions in sequence to accurately position the `baba_obj` at the `[8, 8]` location, completing the level.

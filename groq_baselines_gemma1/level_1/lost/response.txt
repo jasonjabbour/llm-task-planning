@@ -1,0 +1,12 @@
+## Actions to Win the Level:
+
+```python
+['up', 'up', 'up', 'left', 'left', 'left', 'up', 'up', 'up']
+```
+
+**Explanation:**
+
+1. Move the **baba_word** up until it reaches the top of the level. This is necessary to access the flag word.
+2. Move the **baba_obj** 7 steps to the left to reach the center of the level.
+3. Move the **baba_word** 9 steps up to reach the flag word.
+4. Move the **baba_word** 1 step up to reach the win word.

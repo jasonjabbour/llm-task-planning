@@ -1,0 +1,17 @@
+```python
+["left", "down", "right", "down", "right", "up"]
+```
+
+explanation:
+The goal is to spell the word "WIN" with the 'baba_obj'  object. 
+
+Here's the breakdown:
+
+1. **"left"**: Move the 'baba_obj' one position to the left to position it above the 'WIN' word.
+2. **"down"**: Move the 'baba_obj' one position down to align it with the first letter "W".
+3. **"right"**: Move the 'baba_obj' one position to the right to align it with the second letter "I".
+4. **"down"**: Move the 'baba_obj' one position down to the third letter "N". 
+5. **"right"**: Move the 'baba_obj' to the right, causing the player character to win the level 
+
+ 
+Let me know if you'd like to see more complex winning strategies or explore different level scenarios!

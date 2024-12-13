@@ -1,0 +1,19 @@
+```Python
+['right', 'right', 'up', 'up', 'left', 'left']
+```
+
+**Explanation:**
+
+1. Move the Baba object **two steps to the right** to reach the center of the level.
+
+
+2. Move the Baba object **two steps up** to reach the starting position of the winning word 'win_word'.
+
+
+3. Move the Baba object **one step to the left** to reach the flag object.
+
+
+4. Move the Baba object **one step up** to reach the flag word 'flag_word'.
+
+
+5. Move the Baba object **one step to the left** to reach the rock word 'rock_word'.

@@ -1,0 +1,7 @@
+```python
+['right','up','right','up','right','up','left','left','left'] 
+```
+
+explanation: 
+The goal is to move the 'baba_obj' to the 'flag_obj' to win.  In my previous attempts I was trying to maneuver 'baba_obj' to the right faster, but I need to carefully position it above the 'flag_obj' before moving left.
+ This sequence of actions should allow me to  reach the  'flag_obj'.

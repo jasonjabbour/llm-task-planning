@@ -1,0 +1,15 @@
+```python
+['right', 'right', 'down', 'down', 'left', 'left', 'up']
+```
+
+**Explanation:**
+
+1. Move the `baba_obj` one step to the right until it reaches the `baba_word`.
+2. Move the `baba_obj` one step down.
+3. Move the `baba_obj` two steps down.
+4. Move the `baba_obj` one step down.
+5. Move the `baba_obj` one step to the left.
+6. Move the `baba_obj` one step to the left.
+7. Move the `baba_obj` one step up.
+
+**This sequence of actions will result in the `baba_obj` spelling out the "win_word" and completing the level.**

@@ -1,0 +1,17 @@
+```python
+
+['right', 'left', 'up', 'down', 'left', 'up', 'right', 'left']
+
+```
+
+**Explanation:**
+
+1. Move one square to the right to reach the rock object.
+2. Move one square to the left to reach the flag object.
+3. Move one square up to reach the win word.
+4. Move one square down to reach to the rock word.
+5. Move one square to the left to reach the rock word.
+6. Move one square up to reach the win word.
+
+
+This sequence of actions will ultimately lead to the player collecting all the required objects and completing the level.

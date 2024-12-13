@@ -1,0 +1,17 @@
+```python
+["up", "up", "right", "right", "down"] 
+```
+
+explanation: 
+
+The goal of the game is likely to reach the `win_word` location, which is at (2, 4).  
+
+The previous attempts lacked the consistent upward movement needed to reach this goal.  
+
+Here's why this new sequence works:
+
+1. **Two "up" actions:** These ensure you move sufficiently upwards to approach the target location.
+2. **Two "right" actions:** These move you horizontally to the rightmost position necessary to reach (2, 4).
+3. **One "down" action:** This final move positions the 'baba_obj' on the winning tile. 
+
+This sequence prioritizes vertical movement to reach the correct horizontal position before moving down to claim victory.

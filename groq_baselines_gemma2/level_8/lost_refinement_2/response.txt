@@ -1,0 +1,17 @@
+```python
+  ["right", "up", "right"] 
+```
+
+**Explanation:**
+
+The previous attempts failed because they didn't directly approach the flag. 
+
+Here's a breakdown of why this new sequence works:
+
+1. **"right":**  Moves the "baba_obj" one space to the right, getting closer to the flag's general location.
+2. **"up":** Moves the "baba_obj" one space up, directly placing it into a position to reach the flag.
+3. **"right":**  Moves the "baba_obj" one space to the right, onto the flag and causing the player to win. 
+
+
+
+Let me know if you want to try another level!

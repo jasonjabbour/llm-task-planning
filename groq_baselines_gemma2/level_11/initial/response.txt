@@ -1,0 +1,11 @@
+```Python
+["right", "right", "right", "up", "up", "up", "left", "left"]
+```
+
+explanation: 
+
+The goal of this level is to make the 'baba_obj' reach the 'win_word' location.  
+
+1. **["right", "right", "right"]**:  These movements shift the 'baba_obj' three spaces to the right, bringing it closer to the 'win_word'. 
+2. **["up", "up", "up"]**:  Next, the 'baba_obj'  is moved up three spaces to align with the 'win_word'.
+3. **["left", "left"]**: Finally, two leftward movements position the 'baba_obj' directly on top of the 'win_word', resulting in a win.
