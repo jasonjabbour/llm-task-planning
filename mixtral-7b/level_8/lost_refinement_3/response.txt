@@ -1,0 +1,15 @@
+Based on the initial state, the goal is to move the `baba_obj` to the `flag_obj` located at position (5,8) while avoiding the `wall_obj` and `wall_word`. 
+
+The previous action sequences indicate trying to move horizontally first before moving vertically did not help win the game. Thus, we should try moving vertically first to avoid wasting moves.
+
+Here's the action sequence:
+
+```Python
+["up", "up", "right", "right", "right", "right", "right", "up", "up", "up", "up"]
+```
+
+Explanation:
+
+1. Move up twice to avoid `wall_obj` and be on the same x-coordinate as `flag_obj`.
+2. Move right five times to reach the same y-coordinate as `flag_obj`.
+3. Move up four times to reach the `flag_obj`.

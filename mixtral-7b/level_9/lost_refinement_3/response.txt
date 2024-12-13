@@ -1,0 +1,11 @@
+Based on the replay buffer of the previous actions, we can see that moving to the position of the skull object results in losing the game. To win the game, we need to move the baba object to the flag object. I noticed that all the previous attempts involved moving up or left, which resulted in losing the game when encountering the skull object. Therefore, let's try moving right and down instead.
+
+Here is the action sequence:
+
+```Python
+["right", "down", "right", "down", "right"]
+```
+
+explanation:
+
+The first action "right" moves the baba object away from the skull object and closer to the flag object. Then, moving down twice will avoid the skull object and move the baba object to the row of the flag object. The last action, moving right, will move the baba object to the flag object and win the game.

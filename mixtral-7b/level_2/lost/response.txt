@@ -1,0 +1,9 @@
+Based on the given state, it seems like the objective is to move the 'baba\_obj' to the location of 'win\_word' to win the level. The initial state has 'baba\_obj' at position (5, 4) and 'win\_word' at position (2, 4). Therefore, the following sequence of actions will allow the 'baba\_obj' to reach the 'win\_word' location:
+
+```Python
+["down", "down", "down", "right", "right", "right", "right"]
+```
+
+explanation:
+
+First, we move the 'baba\_obj' downwards by 3 units to reach the same row as the 'win\_word'. Then, we move the 'baba\_obj' 4 units to the right to reach the same column as the 'win\_word'. This sequence of actions will allow us to place the 'baba\_obj' on the 'win\_word' location, thus winning the level.

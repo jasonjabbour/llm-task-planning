@@ -1,0 +1,11 @@
+In the given state, the player (represented by 'you\_word') is located at position (3, 8) and the goal (represented by 'win\_word') is at position (3, 7). The player can move in four directions: up, down, left, and right. To win the level, the player needs to reach the goal.
+
+Here is the sequence of actions to win the level:
+
+```Python
+["down"]
+```
+
+Explanation:
+
+The player is currently located at position (3, 8) and the goal is at position (3, 7). The player only needs to move down one position to reach the goal. Therefore, the optimal action is to move down.

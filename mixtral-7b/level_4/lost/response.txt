@@ -1,0 +1,7 @@
+To win this level, we need to move the 'baba_obj' to the location of 'win_word'. From the initial state, we can see that 'baba_obj' is located at position (2, 5) and 'win_word' is located at position (8, 8). To reach there, we need to move 'baba_obj' to the right 6 times, then down 3 times. Therefore, the sequence of actions is as follows:
+
+```Python
+["right", "right", "right", "right", "right", "right", "down", "down", "down"]
+```
+
+This will allow us to win the level because 'baba_obj' will reach the location of 'win_word' by moving to the right and then down based on the available actions in the action space. Once the 'baba_obj' is on top of the 'win_word', the game will be won.

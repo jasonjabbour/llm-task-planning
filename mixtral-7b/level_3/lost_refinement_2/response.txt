@@ -1,0 +1,44 @@
+Based on the initial state, the goal is to move the 'love_obj' to its corresponding 'win_word' location at (3, 1) and the 'flag_obj' to its corresponding 'flag_word' location at (6, 8).
+
+The previous action sequences missed the target location for the 'love_obj' and also didn't account for the correct movement of the 'flag_obj'.
+
+```Python
+["up", "up", "up", "up", "right", "right", "right", "right", "down", "down"]
+```
+
+explanation:
+
+1. Move 'flag_obj' up from starting position at (7, 6) to (4, 6).
+
+Changes:
+"flag_obj": [[7, 6]] --> [[7, 7]], [[7, 7]] --> [[7, 8]], [[7, 8]] --> [[7, 9]], [[7, 9]] --> [[6, 9]], [[6, 9]] --> [[5, 9]], [[5, 9]] --> [[4, 9]], [[4, 9]] --> [[4, 8]], [[4, 8]] --> [[4, 7]], [[4, 7]] --> [[4, 6]]
+
+2. Move 'love_obj' up from starting position at (7, 3) to (4, 3).
+
+Changes:
+"love_obj": [[7, 3]] --> [[7, 4]], [[7, 4]] --> [[7, 5]], [[7, 5]] --> [[7, 6]], [[7, 6]] --> [[7, 7]], [[7, 7]] --> [[7, 8]], [[7, 8]] --> [[7, 9]], [[7, 9]] --> [[6, 9]], [[6, 9]] --> [[5, 9]], [[5, 9]] --> [[4, 9]], [[4, 9]] --> [[4, 8]], [[4, 8]] --> [[4, 7]], [[4, 7]] --> [[4, 6]], [[4, 6]] --> [[4, 5]], [[4, 5]] --> [[4, 4]], [[4, 4]] --> [[4, 3]]
+
+3. Move 'love_obj' right from (4, 3) to (5, 3).
+
+Changes:
+"empty": Added: [[4, 3]], "empty": Removed: [[5, 3]]
+"love_obj": [[4, 3]] --> [[5, 3]]
+
+4. Move 'love_obj' right from (5, 3) to (6, 3).
+
+Changes:
+"empty": Added: [[5, 3]], "empty": Removed: [[6, 3]]
+"love_obj": [[5, 3]] --> [[6, 3]]
+
+5. Move 'love_obj' right from (6, 3) to its goal at (6, 1).
+
+Changes:
+"win_word": [[6, 1]] --> [[6, 2]], [[6, 2]] --> [[6, 3]], [[6, 3]] --> [[6, 4]], [[6, 4]] --> [[6, 5]], [[6, 5]] --> [[6, 6]], [[6, 6]] --> [[6, 7]], [[6, 7]] --> [[6, 8]], [[6, 8]] --> [[6, 1]]
+"love_obj": [[6, 3]] --> [[6, 2]], [[6, 2]] --> [[6, 1]]
+
+6. Move 'flag_obj' down from (4, 6) to its goal at (6, 8).
+
+Changes:
+"flag_obj": [[4, 6]] --> [[4, 5]], [[4, 5]] --> [[4, 4]], [[4, 4]] --> [[4, 3]], [[4, 3]] --> [[4, 2]], [[4, 2]] --> [[4, 1]], [[4, 1]] --> [[4, 0]], [[4, 0]] --> [[5, 0]], [[5, 0]] --> [[6, 0]], [[6, 0]] --> [[6, 1]], [[6, 1]] --> [[6, 2]], [[6, 2]] --> [[6, 3]], [[6, 3]] --> [[6, 4]], [[6, 4]] --> [[6, 5]], [[6, 5]] --> [[6, 6]], [[6, 6]] --> [[6, 7]], [[6, 7]] --> [[6, 8]]
+
+So, combining the actions for both the 'love_obj' and the 'flag_obj', the given action sequence will result in winning the level.

@@ -1,0 +1,7 @@
+To win the level, we need to move the "you_word" object to the "win_word" object. The initial state shows that the "you_word" object is at position (8, 7) and the "win_word" object is at position (8, 1). To reach the "win_word" object, we need to move down 6 times. However, we cannot move down directly because there is the "border" object blocking the way. Therefore, we need to move left 1 time to avoid the "border" object, then move down 6 times. After that, we need to move right 6 times to reach the "win_word" object. Therefore, the sequence of actions is as follows:
+
+```Python
+["left", "down", "down", "down", "down", "down", "right", "right", "right", "right", "right", "right"]
+```
+
+The reason why this sequence of actions will allow us to win the game is that we are avoiding the "border" object and moving towards the "win_word" object in a straight line. Additionally, we are only using the actions available in the action space provided.

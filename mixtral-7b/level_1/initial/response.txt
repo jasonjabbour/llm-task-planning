@@ -1,0 +1,9 @@
+EXPLANATION:
+
+In the given state, the 'you\_word' object is located at position (3, 8) and the 'win\_word' object is located at position (8, 8). To move the 'you\_word' object to the location of the 'win\_word' object, we need to move it 5 units to the right and 1 unit down. This will allow us to win the level.
+
+ACTION SEQUENCE:
+
+```Python
+["right", "right", "right", "right", "right", "down"]
+```

@@ -1,0 +1,13 @@
+To win the level, we need to move the 'baba_obj' to the 'flag_obj' location, which is at position (6, 5). Then, the 'win_word' will appear, and the game will be won. 
+
+The initial state shows that the 'baba_obj' is at position (2, 5), and the 'flag_obj' is at position (6, 5). To move the 'baba_obj' to the 'flag_obj' location, we need to move it 4 units to the right and 3 units down.
+
+Therefore, the action sequence should be:
+
+```Python
+["right", "right", "right", "right", "down", "down", "down"]
+```
+
+explanation:
+
+We move the 'baba_obj' 4 units to the right by executing the 'right' action 4 times. Then, we move it 3 units down by executing the 'down' action 3 times. This sequence of actions moves the 'baba_obj' to the 'flag_obj' location, which triggers the 'win_word' to appear and the game to be won.

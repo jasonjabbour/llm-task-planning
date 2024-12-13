@@ -1,0 +1,12 @@
+To win this level, we need to move the "love_obj" to the location of the "win_word". According to the given state, the "love_obj" is located at (7, 3) and the "win_word" is located at (3, 8). We can achieve this by moving "love_obj" up by 4 units and then moving it to the right by 4 units.
+
+Here are the actions that we need to take:
+
+```python
+["up", "up", "up", "up", "right", "right", "right", "right"]
+```
+
+Explanation:
+
+* We move "love_obj" up by 4 units to reach the same row as the "win_word".
+* We move "love_obj" to the right by 4 units to reach the same column as the "win_word".

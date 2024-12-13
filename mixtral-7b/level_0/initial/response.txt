@@ -1,0 +1,15 @@
+To win the level, we need to move the 'baba_obj' to the 'flag_obj' location, which is at position (7,4). The 'baba_obj' is currently at position (2,4). We can move it up or down to align with the flag object's y-coordinate, and then move it left or right to align with the flag object's x-coordinate.
+
+Here's the action sequence to achieve this:
+
+```Python
+["down", "right", "down"]
+```
+
+Explanation:
+
+1. Move 'baba_obj' down once: `"down"`. It will be at position (3,4).
+2. Move 'baba_obj' to the right twice: `"right", "right"`. It will be at position (5,4).
+3. Move 'baba_obj' down once: `"down"`. It will be at position (7,4) and on top of the flag object's location, thus winning the level.
+
+The given util module has a 'directions' dictionary that contains key-value pairs for the four directions. To move in a specific direction, just use the corresponding keys ("up", "down", "left", or "right"). Each direction value consists of an x-coordinate change and a y-coordinate change. In this case, for moving 'down', we have a 0 change in the x-coordinate and a -1 change in the y-coordinate (moving down by one position in the y-axis).

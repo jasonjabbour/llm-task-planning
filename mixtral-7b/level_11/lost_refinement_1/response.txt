@@ -1,0 +1,16 @@
+Based on the replay buffer from the previous actions, it seems that the game is lost when the `baba_obj` (Baba, the character we control) falls into a location occupied by the `goop_obj`. This happens when Baba moves onto a space with `goop_obj` using the `right` action, which is likely a teleportation action that moves Baba to the right and also moves the `goop_obj` directly below Baba upwards.
+
+In order to win, we need to get Baba on top of the `flag_obj` at position (7, 7). One strategy to do so is by following these steps:
+1. Move Baba upwards until we reach the row where `flag_obj` is, making sure that Baba does not fall into any `goop_obj`. Since `controllables` is a list containing the object that we can currently control, this should only include `baba_obj` and we only have 4 possible actions to choose.
+2. Move Baba left or right to be in the same column as the `flag_obj`.
+3. Move Baba upwards to reach the `flag_obj`.
+
+With this strategy, we can win the game and not encounter the same issue of losing as in the previous actions. Here's an example action sequence that can do that:
+
+```Python
+["up", "up", "up", "up", "up", "up", "left", "up", "up", "up", "up"]
+```
+
+explanation:
+
+Following the described strategy, we first move Baba upwards to avoid any `goop_obj` that we might encounter on the same row as the `flag_obj`. We then move Baba left since the `flag_obj` is located to the left side, and finally move Baba upwards to land on the `flag_obj`.
