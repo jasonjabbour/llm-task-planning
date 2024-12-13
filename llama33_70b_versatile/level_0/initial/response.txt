@@ -1,0 +1,12 @@
+To solve this level, we need to guide the 'baba_obj' to the 'flag_obj' to win the game. The 'baba_obj' is currently located at [2, 4] and the 'flag_obj' is at [7, 4]. 
+
+Our goal is to move the 'baba_obj' to the right until it reaches the 'flag_obj'. The 'baba_obj' can only move up, down, left, or right.
+
+Here is our action sequence:
+
+```Python
+["right", "right", "right", "right", "right"]
+```
+
+Explanation:
+The 'baba_obj' starts at [2, 4]. To reach the 'flag_obj' at [7, 4], we need to move the 'baba_obj' 5 steps to the right. This is because the x-coordinate of the 'baba_obj' needs to increase from 2 to 7, which is a difference of 5. The y-coordinate remains the same, so we only need to move right. Therefore, the action sequence consists of 5 'right' actions. This sequence of actions will result in the 'baba_obj' reaching the 'flag_obj', thereby winning the level.

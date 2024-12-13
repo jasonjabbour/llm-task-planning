@@ -1,0 +1,18 @@
+To win the level, we need to move the 'baba_obj' to the 'win_word' location. The 'baba_obj' is initially located at [2, 2] and the 'win_word' is located at [8, 8]. 
+
+The 'baba_obj' can move up, down, left, or right. We need to navigate through the empty spaces and avoid the rocks and borders.
+
+First, we need to move the 'baba_obj' to the right until we reach the right edge of the empty space. Then, we need to move it up to reach the 'win_word' location.
+
+Here are the actions to win the level:
+
+```python
+["right", "right", "right", "right", "right", "right", "up", "up", "up", "up", "up", "up", "right", "right"]
+```
+
+Explanation:
+We start by moving the 'baba_obj' to the right until we reach the column where the 'win_word' is located. Then, we move it up to reach the row where the 'win_word' is located. By doing this, we ensure that the 'baba_obj' reaches the 'win_word' location and wins the level. Note that the exact number of steps to the right and up may vary depending on the exact starting position of the 'baba_obj' and the layout of the level. However, in general, this approach should work. 
+
+Please note that this solution assumes that there are no obstacles or rocks in the path to the 'win_word' location. If there are obstacles, we would need to modify the solution to navigate around them. 
+
+Also, note that the exact implementation of the movement and the checks for obstacles would depend on the specific game mechanics and rules, which are not fully specified in the problem statement.

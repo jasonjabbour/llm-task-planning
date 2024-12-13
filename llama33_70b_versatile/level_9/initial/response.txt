@@ -1,0 +1,20 @@
+To win the level, we need to guide the 'baba_obj' to the 'win_word' location. The 'baba_obj' is initially located at [2, 5] and the 'win_word' is located at [8, 1]. 
+
+The goal is to move the 'baba_obj' to the 'win_word' location without encountering any 'skull_obj' or other obstacles that might cause the game to be lost.
+
+Given the initial state, the 'baba_obj' is surrounded by empty spaces and other objects, but there is a clear path to the 'win_word' location. 
+
+The 'baba_obj' needs to move right to avoid the 'skull_word' and then move down to reach the 'win_word' location.
+
+Here is the list of actions required to win the level:
+
+```Python
+["right", "right", "right", "right", "right", "right", "down", "down", "down", "down", "down", "down", "down"]
+```
+
+Explanation:
+This sequence of actions moves the 'baba_obj' to the right to reach the same column as the 'win_word', then moves it down to reach the 'win_word' location, thus winning the level. 
+
+Note: This is a simplified approach and does not take into account any potential obstacles or other objects that might interfere with the path to the 'win_word' location. 
+
+However, based on the given initial state, this sequence of actions should allow the 'baba_obj' to reach the 'win_word' location and win the level.

@@ -1,0 +1,16 @@
+To win the level, we need to guide the 'baba_obj' to the 'flag_obj' while avoiding the 'skull_obj'. The initial state shows that the 'baba_obj' is at location [2, 5] and the 'flag_obj' is at location [6, 5]. The 'skull_obj' is located at various positions, but the ones that are relevant to our path are at locations [5, 6], [5, 5], [5, 4], [6, 6], [6, 4], [7, 6], [7, 5], and [7, 4].
+
+The previous actions and replay buffer show that moving the 'baba_obj' to the right results in a loss because it encounters a 'skull_obj' at location [5, 5]. Therefore, we need to find an alternative path.
+
+Upon examining the initial state, we can see that there is a clear path to the 'flag_obj' by moving the 'baba_obj' down and then right. However, we need to avoid the 'skull_obj' at location [5, 5]. To do this, we can move the 'baba_obj' down to location [2, 4] and then move it right to location [5, 4] is not possible because of the 'skull_obj' at [5, 4], [5, 5] and [5, 6]. We can move the 'baba_obj' down to location [4, 5] and then move it right.
+
+Here is the corrected action sequence:
+```python
+["down", "down", "right", "right", "down"]
+```
+This sequence moves the 'baba_obj' down to location [4, 5], then moves it right to location [5, 5] is not possible, instead we move it right to location [8, 5] is also not possible. So our only way to get the flag is go down first then go right. 
+
+Here is the corrected action sequence:
+```python
+["down", "down", "down", "right", "right"]
+```

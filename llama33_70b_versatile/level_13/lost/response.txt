@@ -1,0 +1,17 @@
+To win the level, we need to move the `baba_obj` to the location of the `win_word`. The current position of the `baba_obj` is at `[6, 4]`, and the `win_word` is at `[8, 1]`. 
+
+The shortest path to the `win_word` would be to move `baba_obj` right and then down. We can calculate the required movements by subtracting the coordinates of the `baba_obj` from the coordinates of the `win_word`. 
+
+First, we move `baba_obj` right from `[6, 4]` to `[8, 4]`, which requires 2 steps to the right. Then, we move `baba_obj` down from `[8, 4]` to `[8, 1]`, which requires 3 steps down.
+
+However, since we can only move in the four main directions ('up', 'down', 'left', 'right'), we will first move `baba_obj` to the right until we reach the x-coordinate of the `win_word` (8), and then we will move `baba_obj` down until we reach the y-coordinate of the `win_word` (1).
+
+Therefore, the required actions are 'right' twice and 'down' three times.
+
+## Actions:
+```python
+["right", "right", "down", "down", "down"]
+```
+
+## Explanation:
+The given sequence of actions allows the `baba_obj` to move from its initial position at `[6, 4]` to the position of the `win_word` at `[8, 1]`, thus winning the level. This sequence is the shortest path to the `win_word` given the constraints of the game and the available actions.

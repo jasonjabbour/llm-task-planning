@@ -1,0 +1,26 @@
+To win the level, we need to get the 'baba_obj' to the 'win_word' location. Based on the initial state, the 'baba_obj' is located at [2, 6] and the 'win_word' is located at [3, 7]. 
+
+From the history of previous actions, we can see that moving the 'baba_obj' to the right results in the game being lost, because the 'baba_obj' is removed from the state when it touches the 'goop_obj'. 
+
+So, the correct action sequence would be to move the 'baba_obj' up to the location [2, 7], then right to the location [3, 7], which is the location of the 'win_word'.
+
+```python
+["up", "right"]
+```
+
+This action sequence will result in winning the level because it avoids the 'goop_obj' and gets the 'baba_obj' to the 'win_word' location. 
+
+However, this sequence is too short and may not work as expected, we can try an alternative approach:
+
+First, move down to [2, 5], then move right until we are at [3, 5], next move up until we reach the desired y coordinate of the win_word (at y=7), then finally move right to the win_word.
+
+```python
+["down", "right", "right", "up", "up", "right"]
+```
+But again this action may cause the game to end because the goop_obj may be in the path.
+
+A safer approach will be to move the baba_obj to y = 8 first.
+```python
+["up", "up", "right", "down", "down", "right", "up", "up", "right", "down"]
+```
+Here in this code we are moving up twice, right, then down twice and right. Now we should be in x=3 and y=7 which is 'win_word'. Please note that all of these sequences assume that goop_obj is the only thing that will cause us to lose, and moving the baba_obj into any other object or wall will also end the game, but based on given data we can't be sure of that.

@@ -1,0 +1,20 @@
+To win the game, we need to get the 'baba_obj' to the 'win_word' location. From the initial state, we see that the 'baba_obj' is at location [[5, 4]] and the 'win_word' is at location [[2, 4]]. 
+
+Our strategy will be to move the 'baba_obj' to the left until it reaches the 'win_word' location, and then move it up to overlap with the 'win_word'.
+
+We can observe from the replay buffers of the previous actions that moving down first and then left will correctly position the 'baba_obj' to reach the 'win_word' location. 
+
+However, in all previous attempts, after moving the 'baba_obj' to the correct x-coordinate (2), the next actions were moving up which changed the 'win_word' location. 
+
+So, the correct action sequence will be to move down twice, then left three times, and then right twice to move the 'baba_obj' to the correct position.
+
+
+```python
+["down", "down", "left", "left", "left", "right", "right"]
+```
+
+This action sequence should correctly position the 'baba_obj' to overlap with the 'win_word', resulting in a win. 
+
+Note that the last two actions ("right", "right") might seem counterintuitive, but they are necessary to correctly position the 'baba_obj' after it has been moved to the left. 
+
+By following this sequence of actions, we should be able to win the game.
