@@ -225,6 +225,13 @@ for model in models:
 
         # Generate pruned actions
         pruned_actions = generate_pruned_actions(infos["verbs"], infos["entities"], entity_types, verb_constraints, facts_dict)
+        pruned_actions.append("lock the chest with the key")
+
+        pruned_actions = {i: action for i, action in enumerate(pruned_actions)}
+
+        actions_dict = pruned_actions
+
+        # pruned_actions = ["take TextWorld style key from workbench", "unlock TextWorld style chest", "open TextWorld style chest", "take key from TextWorld style chest", "lock the chest with the key"]
 
         # Compare pruned actions with admissible commands
         missing_actions = [cmd for cmd in infos["admissible_commands"] if cmd not in pruned_actions]
@@ -247,7 +254,7 @@ for model in models:
                 f"Goal (symbolic):\n{goal_fluent}\n\n"
                 f"State (in natural language): {obs}\n\n"
                 f"State (symbolic):\n{facts_dict}\n\n"
-                f"Actions list (Your transition model MUST HANDLE ALL THESE ACTIONS, Even actions perceived as synonyms or unnecessary must still be handled!):\n{pruned_actions}\n\n"
+                f"Your actions_dict is this, please only use the keys to access actions in your transition model:\n{actions_dict}\n\n"
                 f"Entities in the room: {entities_list}\n\n"
                 f"Inventory: {inventory_list}\n\n"
                 f"Please write the Python code for the transition model below. Include the following utility function for verifying the goal state. You do not need to model rewards:\n\n"
@@ -264,8 +271,11 @@ for model in models:
                 f"    \"\"\"\n"
                 f"    return all(state.get(fluent, False) for fluent in goal_fluent)\n\n"
                 f"# Transition Model\n"
+                f"# Assume you can access actions_dict as a global variable to use in the transition model\n"
                 f"def transition_model(state, action):\n"
                 f"    # Your generated transition model logic goes here.\n"
+                f"    if action == actions_dict[0]:\n"
+                f"        # insert changes to symbolic state\n"
                 f"    pass\n"
                 f"```"
             )
@@ -274,7 +284,7 @@ for model in models:
         print("PROMPT BELOW:")
         print(prompt_content)
 
-        breakpoint()
+        # breakpoint()
 
         # Generate the world model
         messages = [{"role": "user", "content": prompt_content}]
