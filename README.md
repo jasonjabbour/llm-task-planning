@@ -31,13 +31,11 @@ export GROQ_API_KEY=<groq_token_here>
 
 tw-make custom --world-size 5 --nb-objects 10 --quest-length 10 --seed 1234 --output tw_games/custom_game.z8
 
-# Levels
+# Installing Symbolic Planner (Fast Downward)
 
-tw-make custom --world-size 1 --nb-objects 5 --quest-length 5 --seed 1234 --output tw_games/easy.z8
+Follow the link below to install the Fast Downward planner that will allow you to run high_level_planner.sh to output the plan_demo_LEVELS.json file.
 
-tw-make custom --world-size 5 --nb-objects 10 --quest-length 10 --seed 1234 --output tw_games/medium.z8
-
-tw-make custom --world-size 10 --nb-objects 30 --quest-length 30 --seed 1234 --output tw_games/hard.z8
+https://github.com/aibasel/downward.git
 
 # run the prompts and copy paste the transition model into world model
 
