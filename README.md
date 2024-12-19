@@ -27,13 +27,9 @@ pip install groq
 export GROQ_API_KEY=<groq_token_here>
 
 
-# Generate an Environment
-
-tw-make custom --world-size 5 --nb-objects 10 --quest-length 10 --seed 1234 --output tw_games/custom_game.z8
-
 # Installing Symbolic Planner (Fast Downward)
 
-Follow the link below to install the Fast Downward planner that will allow you to run high_level_planner.sh to output the plan_demo_LEVELS.json file.
+Follow the link below to install the Fast Downward planner that will allow you to run high_level_planner.sh to output the plan_demo_LEVELS.json file and the exploration_generation.sh.
 
 https://github.com/aibasel/downward.git
 
@@ -41,4 +37,7 @@ https://github.com/aibasel/downward.git
 
 # evaluating transition model (example for level 0)
 
-python prism.py --levels "[('demo_LEVELS', 0)]"
+python prism.py --levels "[('demo_LEVELS', 0)]" 
+
+- After generating the transition models with the prompts you can use this to evaluate the corresponding levels by changing the level parameter.
+- You may get to a level where the transition model no longer works, in which case you will need to refine it with the prompts
