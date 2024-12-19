@@ -33,11 +33,10 @@ Follow the link below to install the Fast Downward planner that will allow you t
 
 https://github.com/aibasel/downward.git
 
-# run the prompts and copy paste the transition model into world model
-
 # evaluating transition model (example for level 0)
 
 python prism.py --levels "[('demo_LEVELS', 0)]" 
 
+- Run the c1 prompt and copy paste the transition model into worldmodel.py
 - After generating the transition models with the prompts you can use this to evaluate the corresponding levels by changing the level parameter.
 - You may get to a level where the transition model no longer works, in which case you will need to refine it with the prompts
