@@ -33,7 +33,7 @@ Follow the link below to install the Fast Downward planner that will allow you t
 
 https://github.com/aibasel/downward.git
 
-# evaluating transition model (example for level 0)
+# Evaluating transition model (example for level 0)
 
 python prism.py --levels "[('demo_LEVELS', 0)]" 
 
