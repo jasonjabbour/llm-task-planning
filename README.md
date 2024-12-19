@@ -36,7 +36,3 @@ https://github.com/aibasel/downward.git
 # Evaluating transition model (example for level 0)
 
 python prism.py --levels "[('demo_LEVELS', 0)]" 
-
-- Run the c1 prompt and copy paste the transition model into worldmodel.py
-- After generating the transition models with the prompts you can use this to evaluate the corresponding levels by changing the level parameter.
-- You may get to a level where the transition model no longer works, in which case you will need to refine it with the prompts
